@@ -1,5 +1,7 @@
 # Data Training Tasks
 
+<br/>
+
 ## Data Base Fundamentals and Data modelling - Day 1
 
 ### Task included with Readme in it
