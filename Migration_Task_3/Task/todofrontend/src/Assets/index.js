@@ -1,0 +1,6 @@
+export const pic = require('./pic.jpg')
+export const Premium = require('./premium.png')
+export const history = require('./History.jpg')
+export const dummy = require('./dummy.png')
+export const logocap = require('./Logo.png')
+export const logo = require('./Logo_cap.png')

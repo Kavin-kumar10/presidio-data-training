@@ -1,0 +1,47 @@
+# version: '3.8'
+
+# services:
+#   mongo:
+#     container_name: mongoimage 
+#     image: mongo:latest
+#     ports:
+#       - '27017:27017'
+
+#   frontend:
+#     container_name: frontendwithmongo
+#     build: ./frontend
+#     ports:
+#       - '3000:3000'
+#     depends_on:
+#       - backend
+
+#   backend:
+#     container_name: backendwithmongo
+#     restart: always
+#     build: ./backend
+#     ports:
+#       - '5000:5000'
+#     links:
+#       - mongo
+#     depends_on:
+#       - mongo
+
+version: "2"
+services:
+
+    client:
+        build: ./Frontend
+        restart: always
+        ports:
+            - "3000:3000"
+    api:
+      build: ./BackEnd
+      ports:
+        - '8080:8080'
+      depends_on:
+        - mongo
+
+    mongo:
+      image: mongo
+      ports:
+          - 27017:27017
